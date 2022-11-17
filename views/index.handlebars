@@ -1,0 +1,67 @@
+<div class="header">
+    <img src="fruits.png" width="80" alt="">
+    <h1>Fruits</h1>
+</div>
+<div>
+
+    <form action="/add" method="post">
+
+        <h2>Add fruits eaten</h2>
+
+        <div>
+            <a href="/logout">Logout</a>
+        </div>
+
+        <div class="error">
+            {{messages.error}}
+        </div>
+        <div class="success">
+            {{messages.success}}
+        </div>
+
+        <div class="field">
+            <label for="username">Username</label>
+            {{user.username}}
+        </div>
+
+        <div class="field">
+            <label for="fruitId">Fruit</label>
+            <select name="fruitId" id="fruitId">
+                <option value="">Select a fruit</option>
+                {{#each fruits}}
+                <option value="{{id}}">{{name}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="field">
+            <label for="data">Date eaten on</label>
+            <input type="date" id="day" name="day">
+        </div>
+        <div class="field">
+            <label for="data">Quantity</label>
+            <input class="qty" type="number" width="10" id="qty" name="qty">
+        </div>
+        <input type="submit">
+    </form>
+
+    <div>
+        <h2>Fruits eaten</h2>
+        <table>
+            <tr>
+                <th>Eaten by</th>
+                <th>Qty</th>
+                <th>Fruit</th>
+                <th>Eaten on</th>
+            </tr>
+            {{#each eaten}}
+            <tr>
+                <td>{{username}}</td>
+                <td>{{qty}}</td>
+                <td>{{name}}</td>
+                <td>{{day}}</td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+
+</div>

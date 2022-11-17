@@ -1,0 +1,44 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: forestgreen;
+    /* color: white; */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.field {
+    /* padding: 0.25em; */
+}
+
+.error {
+    color: crimson;
+}
+
+.success {
+    color: green;
+}
+
+.field > label {
+    padding: 0.5em;
+    width: 7em;
+    display: inline-block;
+    /* background-color: lightgrey; */
+}
+
+.header {
+    display: flex;
+    padding-bottom: 1em;
+}
+
+.qty{
+    width: 5em;
+}
+
+form {
+    background-color: gainsboro;
+    padding: 1em;
+    border-radius: 0.2em ;
+}

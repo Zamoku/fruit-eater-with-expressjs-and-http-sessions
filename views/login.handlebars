@@ -1,0 +1,22 @@
+<h1>Login</h1>
+
+
+
+<form action="/login" method="post">
+
+     <div class="error">
+            {{messages.error}}
+        </div>
+        <div class="success">
+            {{messages.success}}
+        </div>
+
+    <div class="field">
+        <label for="data">User code</label>
+        <input type="text" name="code" autocomplete="off" >
+    </div>
+
+    <input type="submit" value="Login">
+
+
+</form>
